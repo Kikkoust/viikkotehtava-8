@@ -1,5 +1,5 @@
 const icon_url = 'http://openweathermap.org/img/wn';
-const api_key = '5e8698fa2c220615b7cfd21507f40eb1';
+const api_key = '';
 
 const temp_span = document.querySelector('#temp');
 const speed_span = document.querySelector('#speed');
@@ -17,7 +17,7 @@ const getWeather = (lat, lng) => {
             speed_span.innerHTML = json.wind.speed + ' m/s';
             direction_span.innerHTML = json.wind.deg + '&#176;';
             description_span.innerHTML = json.weather[0].description;
-            const image = icon_url + json.weather[0].icon + '@2x.png';
+            const image = icon_url + json.weather[0].icon + '';
             icon_img.src = image;
         })
         .catch(error => {
